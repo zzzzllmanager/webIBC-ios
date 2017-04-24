@@ -16,6 +16,10 @@
 		46026D101EAD9D170088E8D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46026D0E1EAD9D170088E8D7 /* LaunchScreen.storyboard */; };
 		46026D1B1EAD9D170088E8D7 /* WebIBCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D1A1EAD9D170088E8D7 /* WebIBCTests.m */; };
 		46026D261EAD9D170088E8D7 /* WebIBCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D251EAD9D170088E8D7 /* WebIBCUITests.m */; };
+		46026D3A1EADCE130088E8D7 /* WIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D391EADCE130088E8D7 /* WIWebViewController.m */; };
+		46026D3C1EADCEBA0088E8D7 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 46026D3B1EADCEBA0088E8D7 /* test.html */; };
+		46026D3F1EADD0870088E8D7 /* WIBleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D3E1EADD0870088E8D7 /* WIBleViewController.m */; };
+		7D30DC46790943F83A9A4113 /* libPods-WebIBC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686A14822618BDDFAF0F72B /* libPods-WebIBC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +42,10 @@
 /* Begin PBXFileReference section */
 		46026CFA1EAD9D170088E8D7 /* WebIBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebIBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46026CFE1EAD9D170088E8D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46026D001EAD9D170088E8D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46026D011EAD9D170088E8D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		46026D031EAD9D170088E8D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		46026D041EAD9D170088E8D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46026D001EAD9D170088E8D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		46026D011EAD9D170088E8D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		46026D031EAD9D170088E8D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		46026D041EAD9D170088E8D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		46026D071EAD9D170088E8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46026D0A1EAD9D170088E8D7 /* WebIBC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WebIBC.xcdatamodel; sourceTree = "<group>"; };
 		46026D0C1EAD9D170088E8D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 		46026D211EAD9D170088E8D7 /* WebIBCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebIBCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46026D251EAD9D170088E8D7 /* WebIBCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebIBCUITests.m; sourceTree = "<group>"; };
 		46026D271EAD9D170088E8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46026D371EADCC000088E8D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		46026D381EADCE130088E8D7 /* WIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIWebViewController.h; sourceTree = "<group>"; };
+		46026D391EADCE130088E8D7 /* WIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIWebViewController.m; sourceTree = "<group>"; };
+		46026D3B1EADCEBA0088E8D7 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		46026D3D1EADD0870088E8D7 /* WIBleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIBleViewController.h; sourceTree = "<group>"; };
+		46026D3E1EADD0870088E8D7 /* WIBleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIBleViewController.m; sourceTree = "<group>"; };
+		4686A14822618BDDFAF0F72B /* libPods-WebIBC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebIBC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebIBC.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC.release.xcconfig"; sourceTree = "<group>"; };
+		DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebIBC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D30DC46790943F83A9A4113 /* libPods-WebIBC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +101,8 @@
 				46026D191EAD9D170088E8D7 /* WebIBCTests */,
 				46026D241EAD9D170088E8D7 /* WebIBCUITests */,
 				46026CFB1EAD9D170088E8D7 /* Products */,
+				BCD2503BB0DF356EA15B997F /* Pods */,
+				7E31F7119DB658A502801891 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +119,10 @@
 		46026CFC1EAD9D170088E8D7 /* WebIBC */ = {
 			isa = PBXGroup;
 			children = (
-				46026D001EAD9D170088E8D7 /* AppDelegate.h */,
-				46026D011EAD9D170088E8D7 /* AppDelegate.m */,
-				46026D031EAD9D170088E8D7 /* ViewController.h */,
-				46026D041EAD9D170088E8D7 /* ViewController.m */,
-				46026D061EAD9D170088E8D7 /* Main.storyboard */,
-				46026D0C1EAD9D170088E8D7 /* Assets.xcassets */,
-				46026D0E1EAD9D170088E8D7 /* LaunchScreen.storyboard */,
-				46026D111EAD9D170088E8D7 /* Info.plist */,
-				46026D091EAD9D170088E8D7 /* WebIBC.xcdatamodeld */,
+				46026D361EADCB6F0088E8D7 /* Main */,
+				46026D331EADCB580088E8D7 /* Controller */,
+				46026D341EADCB580088E8D7 /* View */,
+				46026D351EADCB580088E8D7 /* Model */,
 				46026CFD1EAD9D170088E8D7 /* Supporting Files */,
 			);
 			path = WebIBC;
@@ -120,7 +131,14 @@
 		46026CFD1EAD9D170088E8D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46026D3B1EADCEBA0088E8D7 /* test.html */,
+				46026D061EAD9D170088E8D7 /* Main.storyboard */,
+				46026D0C1EAD9D170088E8D7 /* Assets.xcassets */,
+				46026D0E1EAD9D170088E8D7 /* LaunchScreen.storyboard */,
+				46026D111EAD9D170088E8D7 /* Info.plist */,
+				46026D091EAD9D170088E8D7 /* WebIBC.xcdatamodeld */,
 				46026CFE1EAD9D170088E8D7 /* main.m */,
+				46026D371EADCC000088E8D7 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +161,59 @@
 			path = WebIBCUITests;
 			sourceTree = "<group>";
 		};
+		46026D331EADCB580088E8D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46026D381EADCE130088E8D7 /* WIWebViewController.h */,
+				46026D391EADCE130088E8D7 /* WIWebViewController.m */,
+				46026D3D1EADD0870088E8D7 /* WIBleViewController.h */,
+				46026D3E1EADD0870088E8D7 /* WIBleViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46026D341EADCB580088E8D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46026D351EADCB580088E8D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46026D361EADCB6F0088E8D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				46026D001EAD9D170088E8D7 /* AppDelegate.h */,
+				46026D011EAD9D170088E8D7 /* AppDelegate.m */,
+				46026D031EAD9D170088E8D7 /* ViewController.h */,
+				46026D041EAD9D170088E8D7 /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E31F7119DB658A502801891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4686A14822618BDDFAF0F72B /* libPods-WebIBC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCD2503BB0DF356EA15B997F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */,
+				95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46026D2A1EAD9D170088E8D7 /* Build configuration list for PBXNativeTarget "WebIBC" */;
 			buildPhases = (
+				09BC613CAD382605F790861D /* [CP] Check Pods Manifest.lock */,
 				46026CF61EAD9D170088E8D7 /* Sources */,
 				46026CF71EAD9D170088E8D7 /* Frameworks */,
 				46026CF81EAD9D170088E8D7 /* Resources */,
+				410CD32EC9AF1861A684EE18 /* [CP] Embed Pods Frameworks */,
+				0D5C362EBEB63F9713316F02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +284,7 @@
 				TargetAttributes = {
 					46026CF91EAD9D170088E8D7 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = WAY9P6XCG2;
 						ProvisioningStyle = Automatic;
 					};
 					46026D151EAD9D170088E8D7 = {
@@ -249,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46026D3C1EADCEBA0088E8D7 /* test.html in Resources */,
 				46026D101EAD9D170088E8D7 /* LaunchScreen.storyboard in Resources */,
 				46026D0D1EAD9D170088E8D7 /* Assets.xcassets in Resources */,
 				46026D081EAD9D170088E8D7 /* Main.storyboard in Resources */,
@@ -271,14 +347,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09BC613CAD382605F790861D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0D5C362EBEB63F9713316F02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		410CD32EC9AF1861A684EE18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46026CF61EAD9D170088E8D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				46026D051EAD9D170088E8D7 /* ViewController.m in Sources */,
+				46026D3A1EADCE130088E8D7 /* WIWebViewController.m in Sources */,
 				46026D021EAD9D170088E8D7 /* AppDelegate.m in Sources */,
 				46026CFF1EAD9D170088E8D7 /* main.m in Sources */,
+				46026D3F1EADD0870088E8D7 /* WIBleViewController.m in Sources */,
 				46026D0B1EAD9D170088E8D7 /* WebIBC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,9 +552,14 @@
 		};
 		46026D2B1EAD9D170088E8D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WAY9P6XCG2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/WebIBC/PrefixHeader.pch";
 				INFOPLIST_FILE = WebIBC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WEB.WebIBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,9 +568,14 @@
 		};
 		46026D2C1EAD9D170088E8D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WAY9P6XCG2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/WebIBC/PrefixHeader.pch";
 				INFOPLIST_FILE = WebIBC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WEB.WebIBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +647,7 @@
 				46026D2C1EAD9D170088E8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46026D2D1EAD9D170088E8D7 /* Build configuration list for PBXNativeTarget "WebIBCTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +656,7 @@
 				46026D2F1EAD9D170088E8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46026D301EAD9D170088E8D7 /* Build configuration list for PBXNativeTarget "WebIBCUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +665,7 @@
 				46026D321EAD9D170088E8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
