@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7449C4DE2CB4EED1202725C474BB5C7C947ED76A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7449C4DE2CB4EED1202725C474BB5C7C947ED76A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EEF030B9-3D22-4B27-B86A-3582F569C264",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7449C4DE2CB4EED1202725C474BB5C7C947ED76A" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WebIBC",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WebIBC\/WebIBC.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zzzzllmanager\/webIBC-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7449C4DE2CB4EED1202725C474BB5C7C947ED76A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zzzzllmanager\/webIBC-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7449C4DE2CB4EED1202725C474BB5C7C947ED76A"
+    }
+  ]
+}
