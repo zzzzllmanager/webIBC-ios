@@ -20,9 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
 
-    
 //    WIBleViewController * vc = [[WIBleViewController alloc]init];
     
     WIHomeViewController * vc = [[WIHomeViewController alloc]init];

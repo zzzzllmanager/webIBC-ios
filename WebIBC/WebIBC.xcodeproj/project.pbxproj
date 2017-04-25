@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		46026CFF1EAD9D170088E8D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026CFE1EAD9D170088E8D7 /* main.m */; };
-		46026D021EAD9D170088E8D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D011EAD9D170088E8D7 /* AppDelegate.m */; };
-		46026D051EAD9D170088E8D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D041EAD9D170088E8D7 /* ViewController.m */; };
 		46026D081EAD9D170088E8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46026D061EAD9D170088E8D7 /* Main.storyboard */; };
 		46026D0B1EAD9D170088E8D7 /* WebIBC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46026D091EAD9D170088E8D7 /* WebIBC.xcdatamodeld */; };
 		46026D0D1EAD9D170088E8D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46026D0C1EAD9D170088E8D7 /* Assets.xcassets */; };
@@ -35,6 +33,8 @@
 		46026F7A1EAEEA3B0088E8D7 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F6C1EAEEA3B0088E8D7 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		46026F7B1EAEEA3B0088E8D7 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F6E1EAEEA3B0088E8D7 /* View+MASAdditions.m */; };
 		46026F7C1EAEEA3B0088E8D7 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F711EAEEA3B0088E8D7 /* ViewController+MASAdditions.m */; };
+		46026F811EAEFC560088E8D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F7E1EAEFC560088E8D7 /* AppDelegate.m */; };
+		46026F821EAEFC560088E8D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F801EAEFC560088E8D7 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,6 @@
 /* Begin PBXFileReference section */
 		46026CFA1EAD9D170088E8D7 /* WebIBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebIBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46026CFE1EAD9D170088E8D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46026D001EAD9D170088E8D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		46026D011EAD9D170088E8D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		46026D031EAD9D170088E8D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
-		46026D041EAD9D170088E8D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		46026D071EAD9D170088E8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46026D0A1EAD9D170088E8D7 /* WebIBC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WebIBC.xcdatamodel; sourceTree = "<group>"; };
 		46026D0C1EAD9D170088E8D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,8 +110,10 @@
 		46026F6F1EAEEA3B0088E8D7 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		46026F701EAEEA3B0088E8D7 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		46026F711EAEEA3B0088E8D7 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebIBC.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC.release.xcconfig"; sourceTree = "<group>"; };
-		DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebIBC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC.debug.xcconfig"; sourceTree = "<group>"; };
+		46026F7D1EAEFC560088E8D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WebIBC/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		46026F7E1EAEFC560088E8D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WebIBC/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		46026F7F1EAEFC560088E8D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = WebIBC/ViewController.h; sourceTree = SOURCE_ROOT; };
+		46026F801EAEFC560088E8D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = WebIBC/ViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,10 +240,10 @@
 		46026D361EADCB6F0088E8D7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				46026D001EAD9D170088E8D7 /* AppDelegate.h */,
-				46026D011EAD9D170088E8D7 /* AppDelegate.m */,
-				46026D031EAD9D170088E8D7 /* ViewController.h */,
-				46026D041EAD9D170088E8D7 /* ViewController.m */,
+				46026F7D1EAEFC560088E8D7 /* AppDelegate.h */,
+				46026F7E1EAEFC560088E8D7 /* AppDelegate.m */,
+				46026F7F1EAEFC560088E8D7 /* ViewController.h */,
+				46026F801EAEFC560088E8D7 /* ViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -308,8 +306,6 @@
 		BCD2503BB0DF356EA15B997F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */,
-				95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -450,12 +446,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46026D051EAD9D170088E8D7 /* ViewController.m in Sources */,
+				46026F821EAEFC560088E8D7 /* ViewController.m in Sources */,
 				46026D3A1EADCE130088E8D7 /* WIWebViewController.m in Sources */,
 				46026F551EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.m in Sources */,
-				46026D021EAD9D170088E8D7 /* AppDelegate.m in Sources */,
 				46026F731EAEEA3B0088E8D7 /* MASCompositeConstraint.m in Sources */,
 				46026F531EAEEA1C0088E8D7 /* WebViewJavascriptBridge.m in Sources */,
+				46026F811EAEFC560088E8D7 /* AppDelegate.m in Sources */,
 				46026F781EAEEA3B0088E8D7 /* MASViewConstraint.m in Sources */,
 				46026F561EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.m in Sources */,
 				46026F7B1EAEEA3B0088E8D7 /* View+MASAdditions.m in Sources */,
@@ -617,7 +613,6 @@
 		};
 		46026D2B1EAD9D170088E8D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WAY9P6XCG2;
@@ -633,7 +628,6 @@
 		};
 		46026D2C1EAD9D170088E8D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WAY9P6XCG2;

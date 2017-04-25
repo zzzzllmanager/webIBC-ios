@@ -8,10 +8,18 @@
 
 #import "WIBleViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
-@interface WIBleViewController () <CBCentralManagerDelegate, CBPeripheralDelegate,UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) CBCentralManager *manager;
-@property (nonatomic, strong) CBPeripheral *peripheral;
+#import<CoreLocation/CoreLocation.h>
+
+#import<CoreLocation/CoreLocation.h>
+
+#define BEACONUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]//iBeacon自己设备的uuid
+
+@interface WIBleViewController () <CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic) CLBeaconRegion *beacon;//被扫描的iBeacon
+
+@property (strong, nonatomic) CLLocationManager * locationmanager;
 
 @property (nonatomic,weak)UITableView * tableview;
 
@@ -35,12 +43,19 @@
     [self setUpManager];
     
     [self setUpTableview];
+    
+    NSLog(@"%@",BEACONUUID);
 }
 
 #pragma mark 初始化蓝牙设备
 - (void)setUpManager
 {
-    self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    self.locationmanager = [[CLLocationManager alloc] init];//初始化
+    
+    self.locationmanager.delegate = self;
+    
+    self.beacon = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:BEACONUUID] identifier:@"media"];//初始化监测的iBeacon信息
+    [self.locationmanager requestAlwaysAuthorization];//设置location是一直允许
 }
 
 - (void)setUpTableview
@@ -64,56 +79,37 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         
-    }
-    CBPeripheral * lbc = self.dataArray[indexPath.row];
-    cell.textLabel.text = lbc.name;
+    }   
     return cell;
 }
 
-
-//开始查看服务，蓝牙开启
--(void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     
-    switch (central.state) {
-        case CBCentralManagerStatePoweredOn:
-        {
-        //@"蓝牙已打开,请扫描外设"
-            [_manager scanForPeripheralsWithServices:nil  options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
-        }
-            break;
-        case CBCentralManagerStatePoweredOff:
-        //@"蓝牙没有打开,请先打开蓝牙"
-            break;
-        default:
-            break;
+    if (status == kCLAuthorizationStatusAuthorizedAlways) {
+        [self.locationmanager startMonitoringForRegion:self.beacon];//开始
     }
 }
 
-//查到外设后
--(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
-{
-    
-    if (peripheral.name != nil&&peripheral.isAccessibilityElement == NO) {
-        NSLog(@"%@", [NSString stringWithFormat:@"已发现 peripheral: %@ rssi: %@, UUID: %@ advertisementData: %@ ", peripheral, RSSI, peripheral.identifier, advertisementData]);
-        
-        if(self.dataArray.count == 0){
-            [self.dataArray addObject:peripheral];
-        }else{
-            BOOL isArrayModel = NO;
-            for (CBPeripheral * lbc in self.dataArray) {
-                if(lbc.identifier == peripheral.identifier){
-                    isArrayModel = YES;
-                    break;
-                }
-            }
-            if(!isArrayModel){
-                [self.dataArray addObject:peripheral];
-            }
-        }
-        [self.tableview reloadData];
-    }
+//发现有iBeacon进入监测范围
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
+    [self.locationmanager startRangingBeaconsInRegion:self.beacon];//开始RegionBeacons
+}
 
+//找的iBeacon后扫描它的信息
+- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region{
+
+//    打印信息
+    
+    for (CLBeacon* beacon in beacons) {
+        
+        NSLog(@"rssi is :%ld",beacon.rssi);
+        
+        NSLog(@"beacon.proximity %ld",beacon.proximity);
+        
+        NSLog(@"beacon.major %@",beacon.major);
+        
+        NSLog(@"beacon.minor %@",beacon.minor);
+    }
 }
 
 @end
