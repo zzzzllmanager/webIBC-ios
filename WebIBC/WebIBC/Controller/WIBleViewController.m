@@ -7,21 +7,22 @@
 //
 
 #import "WIBleViewController.h"
-#import <CoreBluetooth/CoreBluetooth.h>
 
 #import<CoreLocation/CoreLocation.h>
 
 #import<CoreLocation/CoreLocation.h>
+
+#import "BabyBluetooth.h"
 
 #define BEACONUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]//iBeacon自己设备的uuid
 
-@interface WIBleViewController () <CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource,CBCentralManagerDelegate, CBPeripheralDelegate>
+@interface WIBleViewController () <CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource>{
+    BabyBluetooth *baby;
+}
 
 @property (strong, nonatomic) CLBeaconRegion *beacon;//被扫描的iBeacon
 
 @property (strong, nonatomic) CLLocationManager * locationmanager;
-
-@property (nonatomic, strong) CBCentralManager *manager;
 
 @property (nonatomic,weak)UITableView * tableview;
 
@@ -81,51 +82,45 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.row == 0){
-        self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    }else{
+        //初始化BabyBluetooth 蓝牙库
+        baby = [BabyBluetooth shareBabyBluetooth];
+        
+        [baby cancelAllPeripheralsConnection];
     
-        [self.manager stopScan];
+        //设置蓝牙委托
+        [baby setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
+            if (central.state == CBCentralManagerStatePoweredOn) {
+               //设备打开成功
+            }
+        }];
+        //设置扫描到设备的委托
+        __weak typeof(self) weakSelf = self;
+        
+        [baby setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
+            NSLog(@"搜索到了设备:%@",peripheral.name);
+            
+            BOOL inArray = NO;
+            for (CBPeripheral * per in weakSelf.dataArray) {
+                if(per.identifier == peripheral.identifier){
+                    inArray = YES;
+                    break;
+                }
+            }
+            if(!inArray){
+                [weakSelf.dataArray addObject:peripheral];
+            }
+        }];
+        
+        //设置委托后直接可以使用，无需等待CBCentralManagerStatePoweredOn状态。
+        baby.scanForPeripherals().begin();
+        
+    }else{
+        
         self.locationmanager = [[CLLocationManager alloc] init];//初始化
         
         self.locationmanager.delegate = self;
     
         [self.locationmanager requestAlwaysAuthorization];//设置location是一直允许
-    }
-}
-
-//开始查看服务，蓝牙开启
--(void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
-    switch (central.state) {
-        case CBCentralManagerStatePoweredOn:
-        {
-//            蓝牙已打开
-            [_manager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
-        }
-            break;
-        case CBCentralManagerStatePoweredOff:
-//            蓝牙没有打开,请先打开蓝牙
-            break;
-        default:
-            break;
-    }
-}
-
-//查到外设后，停止扫描，连接设备
--(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
-{
-    NSLog(@"%@",[NSString stringWithFormat:@"已发现 peripheral: %@ rssi: %@, UUID: %@ advertisementData: %@ ", peripheral, RSSI, peripheral.identifier, advertisementData]);
-    
-    BOOL inArray = NO;
-    
-    for (CBPeripheral * per in self.dataArray) {
-        if(per.identifier == peripheral.identifier){
-            inArray = YES;
-            break;
-        }
-    }
-    if(!inArray){
-        [self.dataArray addObject:peripheral];
     }
 }
 
