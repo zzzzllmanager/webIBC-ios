@@ -45,6 +45,8 @@
     [self renderButtons:webView];
 }
 
+#pragma mark -注册js方法
+
 - (void)setUpAction
 {
     // JS主动调用OjbC的方法
@@ -63,11 +65,11 @@
         NSLog(@"js call getBlogNameFromObjC, data from js is %@", data);
         if (responseCallback) {
             // 反馈给JS
-            responseCallback(@{@"blogName": @"标哥的技术博客"});
+            responseCallback(@{@"blogName": @"name"});
         }
     }];
     
-    [self.bridge callHandler:@"getUserInfos" data:@{@"name": @"标哥"} responseCallback:^(id responseData) {
+    [self.bridge callHandler:@"getUserInfos" data:@{@"name": @"zzz"} responseCallback:^(id responseData) {
         NSLog(@"from js: %@", responseData);
     }];
 }

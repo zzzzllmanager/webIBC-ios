@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "WIBleViewController.h"
+
+#import "WIHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +19,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-    WIBleViewController * vc = [[WIBleViewController alloc]init];
-    self.window.rootViewController = vc;
+    
+
+    
+//    WIBleViewController * vc = [[WIBleViewController alloc]init];
+    
+    WIHomeViewController * vc = [[WIHomeViewController alloc]init];
+    
+    UINavigationController * naVC = [[UINavigationController alloc]initWithRootViewController:vc];
+
+    self.window.rootViewController = naVC;
+    
     return YES;
 }
 

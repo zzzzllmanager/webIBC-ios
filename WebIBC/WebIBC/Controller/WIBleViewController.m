@@ -90,8 +90,7 @@
     }
 }
 
-
-//查到外设后，停止扫描，连接设备
+//查到外设后
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     

@@ -19,6 +19,7 @@
 		46026D3A1EADCE130088E8D7 /* WIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D391EADCE130088E8D7 /* WIWebViewController.m */; };
 		46026D3C1EADCEBA0088E8D7 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 46026D3B1EADCEBA0088E8D7 /* test.html */; };
 		46026D3F1EADD0870088E8D7 /* WIBleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D3E1EADD0870088E8D7 /* WIBleViewController.m */; };
+		46026D451EAEDC030088E8D7 /* WIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D441EAEDC030088E8D7 /* WIHomeViewController.m */; };
 		7D30DC46790943F83A9A4113 /* libPods-WebIBC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686A14822618BDDFAF0F72B /* libPods-WebIBC.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		46026D3B1EADCEBA0088E8D7 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		46026D3D1EADD0870088E8D7 /* WIBleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIBleViewController.h; sourceTree = "<group>"; };
 		46026D3E1EADD0870088E8D7 /* WIBleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIBleViewController.m; sourceTree = "<group>"; };
+		46026D431EAEDC030088E8D7 /* WIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIHomeViewController.h; sourceTree = "<group>"; };
+		46026D441EAEDC030088E8D7 /* WIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIHomeViewController.m; sourceTree = "<group>"; };
 		4686A14822618BDDFAF0F72B /* libPods-WebIBC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebIBC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ECE08C4758270E2A1D80BD /* Pods-WebIBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebIBC.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC.release.xcconfig"; sourceTree = "<group>"; };
 		DA54B00A8648E75F743AA7E2 /* Pods-WebIBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebIBC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebIBC/Pods-WebIBC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				46026D391EADCE130088E8D7 /* WIWebViewController.m */,
 				46026D3D1EADD0870088E8D7 /* WIBleViewController.h */,
 				46026D3E1EADD0870088E8D7 /* WIBleViewController.m */,
+				46026D431EAEDC030088E8D7 /* WIHomeViewController.h */,
+				46026D441EAEDC030088E8D7 /* WIHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				46026CFF1EAD9D170088E8D7 /* main.m in Sources */,
 				46026D3F1EADD0870088E8D7 /* WIBleViewController.m in Sources */,
 				46026D0B1EAD9D170088E8D7 /* WebIBC.xcdatamodeld in Sources */,
+				46026D451EAEDC030088E8D7 /* WIHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
