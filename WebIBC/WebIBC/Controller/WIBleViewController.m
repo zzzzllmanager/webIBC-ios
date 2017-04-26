@@ -136,7 +136,7 @@
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     
-    if(beacons.count>0)
+    if(beacons.count<=0)return;
     //    打印信息
     for (CLBeacon* beacon in beacons) {
         
@@ -148,10 +148,10 @@
         
         NSLog(@"beacon.minor %@",beacon.minor);
         
-        self.dataArray = [NSMutableArray arrayWithArray:beacons];
-        
-        [self.tableview reloadData];
     }
+    self.dataArray = [NSMutableArray arrayWithArray:beacons];
+    
+    [self.tableview reloadData];
 }
 
 - (void)rightItemClick
