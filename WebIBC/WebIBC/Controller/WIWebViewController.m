@@ -86,13 +86,13 @@
             NSMutableArray * sendArray = [NSMutableArray array];
             for (CLBeacon* beacon in self.dataArray) {
                 NSInteger rssi = 0;
-                for (CBPeripheral * per in self.blueArray) {
-                    if(per.identifier == beacon.proximityUUID){
-                        rssi = [per.RSSI integerValue];
+                for (NSDictionary * per in self.blueArray) {
+                    if(per[@"identifier"] == beacon.proximityUUID){
+                        rssi = [per[@"RSSI"] integerValue];
                         break;
                     }
                 }
-               
+                
                 [sendArray addObject:@{@"major":beacon.major,@"minor":beacon.minor,@"rssi":@(rssi)}];
             }
             if(self.context){
@@ -120,14 +120,16 @@
 
     [baby setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
         BOOL inArray = NO;
-        for (CBPeripheral * per in weakSelf.blueArray) {
-            if(per.identifier == peripheral.identifier){
+        
+        NSDictionary * dic = @{@"identifier":peripheral.identifier,@"RSSI":RSSI};
+        for (NSDictionary * per in weakSelf.blueArray) {
+            if(per[@"identifier"] == peripheral.identifier){
                 inArray = YES;
                 break;
             }
         }
         if(!inArray){
-            [weakSelf.blueArray addObject:peripheral];
+            [weakSelf.blueArray addObject:dic];
         }
     }];
     
@@ -158,7 +160,6 @@
     self.context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
     self.context[@"JsInterface"] = self;
-    
 }
 
 #pragma mark -js调oc方法
