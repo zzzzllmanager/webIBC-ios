@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 
-
-#import "WIHomeViewController.h"
+#import "WIWebViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,11 +22,11 @@
 
 //    WIBleViewController * vc = [[WIBleViewController alloc]init];
     
-    WIHomeViewController * vc = [[WIHomeViewController alloc]init];
+    WIWebViewController * vc = [[WIWebViewController alloc]init];
     
-    UINavigationController * naVC = [[UINavigationController alloc]initWithRootViewController:vc];
-
-    self.window.rootViewController = naVC;
+//    UINavigationController * naVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    self.window.rootViewController = vc;
     
     return YES;
 }
