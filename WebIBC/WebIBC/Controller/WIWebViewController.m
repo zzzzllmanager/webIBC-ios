@@ -10,13 +10,17 @@
 
 #import<CoreLocation/CoreLocation.h>
 
+#import "BabyBluetooth.h"
 
-#define WEB_URL @"http://www.baidu.com"//自己的网址
+#import "MJExtension.h"
+
+#define WEB_URL @"http://api.minorfish.com/kjcmin/index.html"//自己的网址
 
 #define BEACONUUID @"12334566-7173-4889-9579-954995439125"//iBeacon自己设备的uuid
 @interface WIWebViewController ()<UIWebViewDelegate,CLLocationManagerDelegate>
-
-@property WebViewJavascriptBridge *bridge;
+{
+    BabyBluetooth *baby;
+}
 
 @property (strong, nonatomic) CLBeaconRegion *beacon;//被扫描的iBeacon
 
@@ -24,11 +28,25 @@
 
 @property (nonatomic,strong)NSMutableArray * dataArray;
 
+@property (nonatomic,strong)NSMutableArray * blueArray;
+
 @property (nonatomic,strong)NSTimer * timer;
+
+@property (nonatomic,strong)JSContext * context;
+
+@property (nonatomic,weak)UIWebView * webView;
 
 @end
 
 @implementation WIWebViewController
+
+-(NSMutableArray *)blueArray
+{
+    if(_blueArray == nil){
+        _blueArray = [NSMutableArray array];
+    }
+    return _blueArray;
+}
 
 -(NSMutableArray *)dataArray
 {
@@ -42,8 +60,6 @@
     [super viewDidLoad];
     
     [self setUpWebView];
-
-    [self setUpAction];
     
     [self setUpManager];
     
@@ -69,11 +85,56 @@
         if(self.dataArray.count>0){
             NSMutableArray * sendArray = [NSMutableArray array];
             for (CLBeacon* beacon in self.dataArray) {
-                [sendArray addObject:@{@"major":beacon.major,@"minor":beacon.minor,@"rssi":@(beacon.rssi)}];
+                NSInteger rssi = 0;
+                for (CBPeripheral * per in self.blueArray) {
+                    if(per.identifier == beacon.proximityUUID){
+                        rssi = [per.RSSI integerValue];
+                        break;
+                    }
+                }
+               
+                [sendArray addObject:@{@"major":beacon.major,@"minor":beacon.minor,@"rssi":@(rssi)}];
             }
-            [self.bridge callHandler:@"leScanCallback" data:@{@"errMsg":@"ok",@"beacons":sendArray}];
+            if(self.context){
+                NSString * str = [@{@"errMsg":@"ok",@"beacons":sendArray} mj_JSONString];
+                
+                NSString * sendString = [NSString stringWithFormat:@"leScanCallback('%@')",str];
+                [self.context evaluateScript:sendString];
+            }
         }
     }];
+    
+    //初始化BabyBluetooth 蓝牙库
+    baby = [BabyBluetooth shareBabyBluetooth];
+
+    [baby cancelAllPeripheralsConnection];
+
+    //设置蓝牙委托
+    [baby setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
+        if (central.state == CBCentralManagerStatePoweredOn) {
+            //设备打开成功
+        }
+    }];
+    //设置扫描到设备的委托
+    __weak typeof(self) weakSelf = self;
+
+    [baby setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
+        BOOL inArray = NO;
+        for (CBPeripheral * per in weakSelf.blueArray) {
+            if(per.identifier == peripheral.identifier){
+                inArray = YES;
+                break;
+            }
+        }
+        if(!inArray){
+            [weakSelf.blueArray addObject:peripheral];
+        }
+    }];
+    
+    //设置委托后直接可以使用，无需等待CBCentralManagerStatePoweredOn状态。
+    baby.scanForPeripherals().begin();
+
+    
 }
 
 #pragma mark 加载webView
@@ -81,19 +142,30 @@
 - (void)setUpWebView
 {
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    self.webView = webView;
+    webView.delegate = self;
+    
     [self.view addSubview:webView];
     
     NSURL *url = [[NSURL alloc]initWithString:WEB_URL];
     
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
     
-    // 开启日志
-    [WebViewJavascriptBridge enableLogging];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    self.context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
-    // 给哪个webview建立JS与OjbC的沟通桥梁
-    self.bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
+    self.context[@"JsInterface"] = self;
     
-    [self.bridge setWebViewDelegate:self];
+}
+
+#pragma mark -js调oc方法
+- (void)getRegistInfo:(NSString *)str
+{
+    
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
@@ -103,6 +175,7 @@
         [self.locationmanager startMonitoringForRegion:self.beacon];//开始MonitoringiBeacon
     }
 }
+
 - (void) locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
     [self.locationmanager requestStateForRegion:self.beacon];
@@ -158,25 +231,9 @@
     
 }
 
-#pragma mark -注册js方法
-
-- (void)setUpAction
-{
-    // JS主动调用OjbC的方法
-    [self.bridge registerHandler:@"getRegistInfo" handler:^(id data, WVJBResponseCallback responseCallback) {
-        if (responseCallback) {
-            // 反馈给JS
-            responseCallback(@{@"info": @"123456"});
-        }
-    }];
-}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     NSLog(@"webViewDidStartLoad");
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"webViewDidFinishLoad");
 }
 
 

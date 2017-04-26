@@ -16,13 +16,6 @@
 		46026D261EAD9D170088E8D7 /* WebIBCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D251EAD9D170088E8D7 /* WebIBCUITests.m */; };
 		46026D3A1EADCE130088E8D7 /* WIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D391EADCE130088E8D7 /* WIWebViewController.m */; };
 		46026D3C1EADCEBA0088E8D7 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 46026D3B1EADCEBA0088E8D7 /* test.html */; };
-		46026D3F1EADD0870088E8D7 /* WIBleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D3E1EADD0870088E8D7 /* WIBleViewController.m */; };
-		46026D451EAEDC030088E8D7 /* WIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026D441EAEDC030088E8D7 /* WIHomeViewController.m */; };
-		46026F531EAEEA1C0088E8D7 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F4C1EAEEA1C0088E8D7 /* WebViewJavascriptBridge.m */; };
-		46026F541EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F4E1EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.m */; };
-		46026F551EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F501EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.m */; };
-		46026F561EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F521EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.m */; };
-		46026F721EAEEA3B0088E8D7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46026F581EAEEA3B0088E8D7 /* Info.plist */; };
 		46026F731EAEEA3B0088E8D7 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F5A1EAEEA3B0088E8D7 /* MASCompositeConstraint.m */; };
 		46026F741EAEEA3B0088E8D7 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F5D1EAEEA3B0088E8D7 /* MASConstraint.m */; };
 		46026F751EAEEA3B0088E8D7 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026F5F1EAEEA3B0088E8D7 /* MASConstraintMaker.m */; };
@@ -44,6 +37,16 @@
 		46026FB81EAF370F0088E8D7 /* BabyRhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026FAD1EAF370F0088E8D7 /* BabyRhythm.m */; };
 		46026FB91EAF370F0088E8D7 /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026FAF1EAF370F0088E8D7 /* BabySpeaker.m */; };
 		46026FBA1EAF370F0088E8D7 /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46026FB11EAF370F0088E8D7 /* BabyToy.m */; };
+		46A1CCB91EB0A041007F4D88 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCA51EB0A041007F4D88 /* MJExtensionConst.m */; };
+		46A1CCBA1EB0A041007F4D88 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCA71EB0A041007F4D88 /* MJFoundation.m */; };
+		46A1CCBB1EB0A041007F4D88 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCA91EB0A041007F4D88 /* MJProperty.m */; };
+		46A1CCBC1EB0A041007F4D88 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCAB1EB0A041007F4D88 /* MJPropertyKey.m */; };
+		46A1CCBD1EB0A041007F4D88 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCAD1EB0A041007F4D88 /* MJPropertyType.m */; };
+		46A1CCBE1EB0A041007F4D88 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCAF1EB0A041007F4D88 /* NSObject+MJClass.m */; };
+		46A1CCBF1EB0A041007F4D88 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCB11EB0A041007F4D88 /* NSObject+MJCoding.m */; };
+		46A1CCC01EB0A041007F4D88 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCB31EB0A041007F4D88 /* NSObject+MJKeyValue.m */; };
+		46A1CCC11EB0A041007F4D88 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCB51EB0A041007F4D88 /* NSObject+MJProperty.m */; };
+		46A1CCC21EB0A041007F4D88 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1CCB71EB0A041007F4D88 /* NSString+MJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,19 +84,6 @@
 		46026D381EADCE130088E8D7 /* WIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIWebViewController.h; sourceTree = "<group>"; };
 		46026D391EADCE130088E8D7 /* WIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIWebViewController.m; sourceTree = "<group>"; };
 		46026D3B1EADCEBA0088E8D7 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		46026D3D1EADD0870088E8D7 /* WIBleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIBleViewController.h; sourceTree = "<group>"; };
-		46026D3E1EADD0870088E8D7 /* WIBleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIBleViewController.m; sourceTree = "<group>"; };
-		46026D431EAEDC030088E8D7 /* WIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIHomeViewController.h; sourceTree = "<group>"; };
-		46026D441EAEDC030088E8D7 /* WIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIHomeViewController.m; sourceTree = "<group>"; };
-		46026F4B1EAEEA1C0088E8D7 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		46026F4C1EAEEA1C0088E8D7 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		46026F4D1EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		46026F4E1EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		46026F4F1EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		46026F501EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		46026F511EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		46026F521EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		46026F581EAEEA3B0088E8D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46026F591EAEEA3B0088E8D7 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		46026F5A1EAEEA3B0088E8D7 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		46026F5B1EAEEA3B0088E8D7 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -141,6 +131,27 @@
 		46026FAF1EAF370F0088E8D7 /* BabySpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
 		46026FB01EAF370F0088E8D7 /* BabyToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
 		46026FB11EAF370F0088E8D7 /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		46A1CCA31EB0A041007F4D88 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		46A1CCA41EB0A041007F4D88 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		46A1CCA51EB0A041007F4D88 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		46A1CCA61EB0A041007F4D88 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		46A1CCA71EB0A041007F4D88 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		46A1CCA81EB0A041007F4D88 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		46A1CCA91EB0A041007F4D88 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		46A1CCAA1EB0A041007F4D88 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		46A1CCAB1EB0A041007F4D88 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		46A1CCAC1EB0A041007F4D88 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		46A1CCAD1EB0A041007F4D88 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		46A1CCAE1EB0A041007F4D88 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		46A1CCAF1EB0A041007F4D88 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		46A1CCB01EB0A041007F4D88 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		46A1CCB11EB0A041007F4D88 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		46A1CCB21EB0A041007F4D88 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		46A1CCB31EB0A041007F4D88 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		46A1CCB41EB0A041007F4D88 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		46A1CCB51EB0A041007F4D88 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		46A1CCB61EB0A041007F4D88 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		46A1CCB71EB0A041007F4D88 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,9 +216,9 @@
 		46026CFD1EAD9D170088E8D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46A1CCA11EB0A041007F4D88 /* MJExtension */,
 				46026F9F1EAF370F0088E8D7 /* BabyBluetooth */,
 				46026F571EAEEA3B0088E8D7 /* Masonry */,
-				46026F4A1EAEEA1C0088E8D7 /* WebViewJavascriptBridge */,
 				46026D3B1EADCEBA0088E8D7 /* test.html */,
 				46026D061EAD9D170088E8D7 /* Main.storyboard */,
 				46026D0C1EAD9D170088E8D7 /* Assets.xcassets */,
@@ -243,10 +254,6 @@
 			children = (
 				46026D381EADCE130088E8D7 /* WIWebViewController.h */,
 				46026D391EADCE130088E8D7 /* WIWebViewController.m */,
-				46026D3D1EADD0870088E8D7 /* WIBleViewController.h */,
-				46026D3E1EADD0870088E8D7 /* WIBleViewController.m */,
-				46026D431EAEDC030088E8D7 /* WIHomeViewController.h */,
-				46026D441EAEDC030088E8D7 /* WIHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,25 +283,9 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		46026F4A1EAEEA1C0088E8D7 /* WebViewJavascriptBridge */ = {
-			isa = PBXGroup;
-			children = (
-				46026F4B1EAEEA1C0088E8D7 /* WebViewJavascriptBridge.h */,
-				46026F4C1EAEEA1C0088E8D7 /* WebViewJavascriptBridge.m */,
-				46026F4D1EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.h */,
-				46026F4E1EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.m */,
-				46026F4F1EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.h */,
-				46026F501EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.m */,
-				46026F511EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.h */,
-				46026F521EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.m */,
-			);
-			path = WebViewJavascriptBridge;
-			sourceTree = "<group>";
-		};
 		46026F571EAEEA3B0088E8D7 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				46026F581EAEEA3B0088E8D7 /* Info.plist */,
 				46026F591EAEEA3B0088E8D7 /* MASCompositeConstraint.h */,
 				46026F5A1EAEEA3B0088E8D7 /* MASCompositeConstraint.m */,
 				46026F5B1EAEEA3B0088E8D7 /* MASConstraint+Private.h */,
@@ -347,6 +338,34 @@
 				46026FB11EAF370F0088E8D7 /* BabyToy.m */,
 			);
 			path = BabyBluetooth;
+			sourceTree = "<group>";
+		};
+		46A1CCA11EB0A041007F4D88 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				46A1CCA31EB0A041007F4D88 /* MJExtension.h */,
+				46A1CCA41EB0A041007F4D88 /* MJExtensionConst.h */,
+				46A1CCA51EB0A041007F4D88 /* MJExtensionConst.m */,
+				46A1CCA61EB0A041007F4D88 /* MJFoundation.h */,
+				46A1CCA71EB0A041007F4D88 /* MJFoundation.m */,
+				46A1CCA81EB0A041007F4D88 /* MJProperty.h */,
+				46A1CCA91EB0A041007F4D88 /* MJProperty.m */,
+				46A1CCAA1EB0A041007F4D88 /* MJPropertyKey.h */,
+				46A1CCAB1EB0A041007F4D88 /* MJPropertyKey.m */,
+				46A1CCAC1EB0A041007F4D88 /* MJPropertyType.h */,
+				46A1CCAD1EB0A041007F4D88 /* MJPropertyType.m */,
+				46A1CCAE1EB0A041007F4D88 /* NSObject+MJClass.h */,
+				46A1CCAF1EB0A041007F4D88 /* NSObject+MJClass.m */,
+				46A1CCB01EB0A041007F4D88 /* NSObject+MJCoding.h */,
+				46A1CCB11EB0A041007F4D88 /* NSObject+MJCoding.m */,
+				46A1CCB21EB0A041007F4D88 /* NSObject+MJKeyValue.h */,
+				46A1CCB31EB0A041007F4D88 /* NSObject+MJKeyValue.m */,
+				46A1CCB41EB0A041007F4D88 /* NSObject+MJProperty.h */,
+				46A1CCB51EB0A041007F4D88 /* NSObject+MJProperty.m */,
+				46A1CCB61EB0A041007F4D88 /* NSString+MJExtension.h */,
+				46A1CCB71EB0A041007F4D88 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		7E31F7119DB658A502801891 /* Frameworks */ = {
@@ -473,7 +492,6 @@
 				46026D3C1EADCEBA0088E8D7 /* test.html in Resources */,
 				46026D101EAD9D170088E8D7 /* LaunchScreen.storyboard in Resources */,
 				46026D0D1EAD9D170088E8D7 /* Assets.xcassets in Resources */,
-				46026F721EAEEA3B0088E8D7 /* Info.plist in Resources */,
 				46026D081EAD9D170088E8D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,14 +519,16 @@
 			files = (
 				46026F821EAEFC560088E8D7 /* ViewController.m in Sources */,
 				46026D3A1EADCE130088E8D7 /* WIWebViewController.m in Sources */,
-				46026F551EAEEA1C0088E8D7 /* WebViewJavascriptBridgeBase.m in Sources */,
 				46026FB91EAF370F0088E8D7 /* BabySpeaker.m in Sources */,
+				46A1CCC11EB0A041007F4D88 /* NSObject+MJProperty.m in Sources */,
 				46026F731EAEEA3B0088E8D7 /* MASCompositeConstraint.m in Sources */,
-				46026F531EAEEA1C0088E8D7 /* WebViewJavascriptBridge.m in Sources */,
+				46A1CCBD1EB0A041007F4D88 /* MJPropertyType.m in Sources */,
+				46A1CCC21EB0A041007F4D88 /* NSString+MJExtension.m in Sources */,
 				46026F811EAEFC560088E8D7 /* AppDelegate.m in Sources */,
 				46026FB61EAF370F0088E8D7 /* BabyOptions.m in Sources */,
+				46A1CCBE1EB0A041007F4D88 /* NSObject+MJClass.m in Sources */,
 				46026F781EAEEA3B0088E8D7 /* MASViewConstraint.m in Sources */,
-				46026F561EAEEA1C0088E8D7 /* WKWebViewJavascriptBridge.m in Sources */,
+				46A1CCBB1EB0A041007F4D88 /* MJProperty.m in Sources */,
 				46026FBA1EAF370F0088E8D7 /* BabyToy.m in Sources */,
 				46026F7B1EAEEA3B0088E8D7 /* View+MASAdditions.m in Sources */,
 				46026FB41EAF370F0088E8D7 /* BabyCentralManager.m in Sources */,
@@ -516,18 +536,20 @@
 				46026FB21EAF370F0088E8D7 /* BabyBluetooth.m in Sources */,
 				46026F761EAEEA3B0088E8D7 /* MASLayoutConstraint.m in Sources */,
 				46026F7C1EAEEA3B0088E8D7 /* ViewController+MASAdditions.m in Sources */,
+				46A1CCC01EB0A041007F4D88 /* NSObject+MJKeyValue.m in Sources */,
 				46026F751EAEEA3B0088E8D7 /* MASConstraintMaker.m in Sources */,
+				46A1CCBF1EB0A041007F4D88 /* NSObject+MJCoding.m in Sources */,
 				46026CFF1EAD9D170088E8D7 /* main.m in Sources */,
 				46026FB51EAF370F0088E8D7 /* BabyDefine.m in Sources */,
-				46026D3F1EADD0870088E8D7 /* WIBleViewController.m in Sources */,
-				46026F541EAEEA1C0088E8D7 /* WebViewJavascriptBridge_JS.m in Sources */,
+				46A1CCBC1EB0A041007F4D88 /* MJPropertyKey.m in Sources */,
 				46026FB31EAF370F0088E8D7 /* BabyCallback.m in Sources */,
+				46A1CCBA1EB0A041007F4D88 /* MJFoundation.m in Sources */,
 				46026D0B1EAD9D170088E8D7 /* WebIBC.xcdatamodeld in Sources */,
 				46026FB71EAF370F0088E8D7 /* BabyPeripheralManager.m in Sources */,
 				46026F791EAEEA3B0088E8D7 /* NSArray+MASAdditions.m in Sources */,
 				46026F771EAEEA3B0088E8D7 /* MASViewAttribute.m in Sources */,
 				46026FB81EAF370F0088E8D7 /* BabyRhythm.m in Sources */,
-				46026D451EAEDC030088E8D7 /* WIHomeViewController.m in Sources */,
+				46A1CCB91EB0A041007F4D88 /* MJExtensionConst.m in Sources */,
 				46026F741EAEEA3B0088E8D7 /* MASConstraint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

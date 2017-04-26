@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
-@interface WIWebViewController : UIViewController
+@protocol TestJSExport <JSExport>
+//JSExportAs
+//(calculateForJS  /** handleFactorialCalculateWithNumber 作为js方法的别名 */,
+// - (void)handleFactorialCalculateWithNumber:(NSNumber *)number
+// );
+- (void)getRegistInfo:(NSString *)str;
+
+@end
+
+@interface WIWebViewController : UIViewController<TestJSExport>
 
 @end
