@@ -96,6 +96,13 @@
     
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    
+    if (status == kCLAuthorizationStatusAuthorizedAlways) {
+        
+        [self.locationmanager startMonitoringForRegion:self.beacon];//开始MonitoringiBeacon
+    }
+}
 - (void) locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
     [self.locationmanager requestStateForRegion:self.beacon];
@@ -135,7 +142,6 @@
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    
     if(beacons.count<=0)return;
     //    打印信息
     for (CLBeacon* beacon in beacons) {
@@ -161,7 +167,7 @@
     self.beacon.notifyOnEntry=YES;
     self.beacon.notifyOnExit=YES;
     self.beacon.notifyEntryStateOnDisplay=YES;
-    [self.locationmanager startRangingBeaconsInRegion:self.beacon];
+
     [self.locationmanager startMonitoringForRegion:self.beacon];
     
 //    //初始化BabyBluetooth 蓝牙库
