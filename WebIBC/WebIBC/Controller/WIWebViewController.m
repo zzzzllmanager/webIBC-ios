@@ -85,15 +85,14 @@
         if(self.dataArray.count>0){
             NSMutableArray * sendArray = [NSMutableArray array];
             for (CLBeacon* beacon in self.dataArray) {
-                NSInteger rssi = 0;
-                for (NSDictionary * per in self.blueArray) {
-                    if(per[@"identifier"] == beacon.proximityUUID){
-                        rssi = [per[@"RSSI"] integerValue];
-                        break;
-                    }
-                }
-                
-                [sendArray addObject:@{@"major":beacon.major,@"minor":beacon.minor,@"rssi":@(rssi)}];
+//                NSInteger rssi = 0;
+//                for (NSDictionary * per in self.blueArray) {
+//                    if(per[@"identifier"] == beacon.proximityUUID){
+//                        rssi = [per[@"RSSI"] integerValue];
+//                        break;
+//                    }
+//                }
+                [sendArray addObject:@{@"major":beacon.major,@"minor":beacon.minor,@"rssi":@(beacon.rssi)}];
             }
             if(self.context){
                 NSString * str = [@{@"errMsg":@"ok",@"beacons":sendArray} mj_JSONString];
