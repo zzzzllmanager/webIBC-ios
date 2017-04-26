@@ -83,7 +83,7 @@
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
     
-    NSURL *url = [[NSURL alloc]initWithString:@"http://www.baidu.com"];
+    NSURL *url = [[NSURL alloc]initWithString:WEB_URL];
     
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
     
