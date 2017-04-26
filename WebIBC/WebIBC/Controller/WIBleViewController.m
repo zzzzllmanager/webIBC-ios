@@ -71,8 +71,6 @@
     tableview.dataSource = self;
     self.tableview = tableview;
     [self.view addSubview:tableview];
-    
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -103,9 +101,14 @@
     [self.locationmanager requestStateForRegion:self.beacon];
 }
 
+-(void)locationManager:(CLLocationManager *)manager
+        didEnterRegion:(CLRegion *)region{
+    
+    [self.locationmanager startRangingBeaconsInRegion:self.beacon];
+}
+
 -(void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
 {
-    
     switch (state) {
         case CLRegionStateInside:
 
@@ -121,30 +124,18 @@
             [self.locationmanager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
             break;
     }
-    if (state == CLRegionStateInside)
-    {
-        //Start Ranging
-        [self.locationmanager startRangingBeaconsInRegion:self.beacon];
-    }
-    else
-    {
-        //Stop Ranging here
-        [self.locationmanager startRangingBeaconsInRegion:self.beacon];
-    }
 }
 
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
-{
-    
-}
 
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
+    
     
 }
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
+    
     if(beacons.count>0)
     //    打印信息
     for (CLBeacon* beacon in beacons) {
@@ -170,6 +161,7 @@
     self.beacon.notifyOnEntry=YES;
     self.beacon.notifyOnExit=YES;
     self.beacon.notifyEntryStateOnDisplay=YES;
+    [self.locationmanager startRangingBeaconsInRegion:self.beacon];
     [self.locationmanager startMonitoringForRegion:self.beacon];
     
 //    //初始化BabyBluetooth 蓝牙库
